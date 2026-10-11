@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shuyuan Liu | Affective Computing, Human Factors, and Accessibility</title>
+    <meta
+      name="description"
+      content="Personal website for Shuyuan Liu, a Georgia Tech HCC Ph.D. student researching affective computing, human factors, accessibility, and human-AI interaction."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=20261011miami-scene">
+    <link rel="stylesheet" href="scene-enhancements.css?v=20261011miami-scene">
+  </head>
+  <body class="page-home">
+    <canvas class="waterfront-scene" id="waterfront-scene" aria-hidden="true"></canvas>
+    <div class="waterfront-fallback" aria-hidden="true"></div>
+    <div class="waterfront-skyline" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <canvas class="neon-canvas" id="neon-canvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="ambient ambient-three" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Homepage">
+          <span class="brand-mark">SL</span>
+          <span class="brand-lockup">
+            <strong>Shuyuan Liu</strong>
+            <small>HCC Ph.D. Researcher</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="#ux-work">UX Work</a>
+          <a href="#timeline">Timeline</a>
+        </nav>
+
+        <div class="header-spacer" aria-hidden="true"></div>
+      </header>
+
+      <main id="top">
+        <section
+          class="hero hero-home hero-cinematic section"
+          data-chapter-title="Home"
+          data-chapter-kicker="Public website"
+          data-chapter-accent="#2c85c8"
+        >
+          <div class="hero-copy reveal">
+            <div class="story-ribbon" aria-label="Atmosphere tags">
+              <span>Affective computing</span>
+              <span>Human factors</span>
+              <span>Accessible human–AI interaction</span>
+            </div>
+            <h1>
+              <span>Technology that</span>
+              <span>adapts to people.</span>
+            </h1>
+            <div class="hero-actions" aria-label="Explore my work">
+              <a class="button button-solid" href="research.html">View research</a>
+              <a class="button button-outline" href="assets/documents/Shuyuan-Liu-CV.pdf" target="_blank" rel="noreferrer">View CV</a>
+            </div>
+            <div class="hero-deck hero-bio">
+              <p>
+                I develop unobtrusive sensing and adaptive intervention technologies to support affect regulation,
+                human performance, and accessible learning.
+              </p>
+            </div>
+          </div>
+
+          <aside class="poster-stack scene-stage reveal reveal-delay-1">
+            <div class="scene-halo scene-halo-pink" aria-hidden="true"></div>
+            <div class="scene-halo scene-halo-gold" aria-hidden="true"></div>
+            <div class="scene-grid-overlay" aria-hidden="true"></div>
+            <div class="poster-frame" id="poster-frame" data-private-entry="poster">
+              <div class="poster-sheen" aria-hidden="true"></div>
+              <img
+                class="poster-image"
+                src="assets/profile-photo.png"
+                alt="Portrait of Shuyuan Liu standing on a beach at sunset"
+              >
+              <div class="poster-caption">
+                <span class="poster-tag">Shuyuan Liu</span>
+                <div class="gt-badge gt-badge-poster">
+                  <img
+                    class="gt-wordmark"
+                    src="assets/georgia-tech-wordmark.svg"
+                    alt="Georgia Tech wordmark"
+                  >
+                  <div class="gt-copy">
+                    <strong>Ph.D. Student · Human-Centered Computing</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section
+          class="portal section"
+          id="portal"
+          data-chapter-title="Highlights"
+          data-chapter-kicker="Selected research"
+          data-chapter-accent="#4da7dc"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">Research archive</p>
+              <h2>Research, made tangible.</h2>
+            </div>
+            <p class="section-intro">
+              Exploring how intelligent systems can sense, adapt to, and support human needs.
+            </p>
+          </div>
+
+          <div class="research-showcase-grid research-showcase-grid-uniform">
+            <article class="research-showcase research-showcase-featured reveal">
+              <a class="research-visual research-visual-photo" href="assets/papers/before-demand-peaks-airflow-guidance-driving.pdf" target="_blank" rel="noreferrer" aria-label="Open Before Demand Peaks paper PDF">
+                <img src="assets/research/before-demand-peaks-study-setup.png" alt="Before Demand Peaks study setup showing a driver in a simulator, respiration belt, ECG sensor, motor control board, DC fan, and three-screen driving simulator">
+                <span class="research-visual-badge">Affective driving &amp; physiology</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">Driving interaction · manuscript</p>
+                <h3>Before Demand Peaks</h3>
+                <p>Preemptive airflow guidance timed around predictable stressors in simulated driving.</p>
+                <a class="card-link" href="assets/papers/before-demand-peaks-airflow-guidance-driving.pdf" target="_blank" rel="noreferrer">Read paper PDF</a>
+              </div>
+            </article>
+
+            <article class="research-showcase research-showcase-heart reveal reveal-delay-1">
+              <a class="research-visual research-visual-photo" href="https://dl.acm.org/doi/abs/10.1145/3776591.3832526" target="_blank" rel="noreferrer" aria-label="Open LLMs with a Heart ACM abstract">
+                <img src="assets/research/llms-with-a-heart-haptics-figure.png" alt="LLMs with a Heart figure showing a mobile reading scenario, contextual heartbeat haptic feedback pipeline, and four experimental conditions">
+                <span class="research-visual-badge">Affective AI &amp; haptics</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">ACM ICMI Companion · 2026</p>
+                <h3>LLMs with a Heart</h3>
+                <p>Contextual heartbeat haptics for affective text and audio LLM interactions.</p>
+                <a class="card-link" href="https://dl.acm.org/doi/abs/10.1145/3776591.3832526" target="_blank" rel="noreferrer">View ACM abstract</a>
+              </div>
+            </article>
+
+            <article class="research-showcase research-showcase-echo reveal">
+              <a class="research-visual research-visual-photo" href="https://dl.acm.org/doi/abs/10.1145/3774398.3811561" target="_blank" rel="noreferrer" aria-label="Open ECHO ACM abstract">
+                <img src="assets/research/echo-forum-summary-figure.png" alt="ECHO figure showing forum posts transformed into topic and comment summaries for teaching assistants">
+                <span class="research-visual-badge">Learning support &amp; forums</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">Learning @ Scale · 2026</p>
+                <h3>ECHO</h3>
+                <p>Just-in-time assistance and retrospective review for teaching assistants in online forums.</p>
+                <a class="card-link" href="https://dl.acm.org/doi/abs/10.1145/3774398.3811561" target="_blank" rel="noreferrer">View ACM abstract</a>
+              </div>
+            </article>
+
+            <article class="research-showcase research-showcase-nosi reveal reveal-delay-1">
+              <a class="research-visual research-visual-photo" href="https://dl.acm.org/doi/epdf/10.1145/3774398.3811574" target="_blank" rel="noreferrer" aria-label="Open NOSI ACM PDF">
+                <img src="assets/research/nosi-instructor-dashboard.png" alt="NOSI instructor-facing coding process replay and inspection dashboard showing submission metadata, anomalies, code replay, and flagged events">
+                <span class="research-visual-badge">AI-resilient assessment</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">Learning @ Scale · 2026</p>
+                <h3>NOSI</h3>
+                <p>Process-driven analytics for more trustworthy coding assessment in the age of LLMs.</p>
+                <a class="card-link" href="https://dl.acm.org/doi/epdf/10.1145/3774398.3811574" target="_blank" rel="noreferrer">View ACM PDF</a>
+              </div>
+            </article>
+
+            <article class="research-showcase research-showcase-zeno reveal">
+              <a class="research-visual research-visual-photo" href="https://doi.org/10.1145/3797867.3841231" target="_blank" rel="noreferrer" aria-label="Open Zeno ACM paper">
+                <img src="assets/research/zeno-core-visual-elements.png" alt="Zeno visual showing a learner accessing computer science Bayes and math materials through a screen reader">
+                <span class="research-visual-badge">Accessible STEM learning</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">ACM ASSETS · 2026</p>
+                <h3>Zeno</h3>
+                <p>BLV-informed guidelines and iterative prompting for more useful LLM-generated alt text.</p>
+                <a class="card-link" href="https://doi.org/10.1145/3797867.3841231" target="_blank" rel="noreferrer">View ACM paper</a>
+              </div>
+            </article>
+
+            <article class="research-showcase research-showcase-truck reveal reveal-delay-1">
+              <a class="research-visual research-visual-photo research-visual-photo-tight" href="https://mengyaoli.me/pdfs/Kimet.al.(2026)AutonomousTruckingAcceptance_WCTR.pdf" target="_blank" rel="noreferrer" aria-label="Open Autonomous Trucking Technology paper PDF">
+                <img src="assets/research/autonomous-trucking-scenario.png" alt="Autonomous trucking scenario diagram showing an ego vehicle, leading vehicle, and autonomous trucks with vehicle distances and speeds">
+                <span class="research-visual-badge">Autonomous vehicles &amp; trust</span>
+              </a>
+              <div class="research-showcase-copy">
+                <p class="card-tag">Driving simulation study</p>
+                <h3>Autonomous Trucking Technology</h3>
+                <p>How information framing, trust, and affect shape road users’ acceptance.</p>
+                <a class="card-link" href="https://mengyaoli.me/pdfs/Kimet.al.(2026)AutonomousTruckingAcceptance_WCTR.pdf" target="_blank" rel="noreferrer">View paper PDF</a>
+              </div>
+            </article>
+          </div>
+          <a class="button button-outline research-archive-link" href="research.html">View complete research archive</a>
+        </section>
+
+        <section
+          class="ux-work section"
+          id="ux-work"
+          data-chapter-title="UX Work"
+          data-chapter-kicker="Selected case studies"
+          data-chapter-accent="#67d4ff"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">UX work</p>
+              <h2>From research to experience.</h2>
+            </div>
+            <p class="section-intro">
+              Translating user insights into thoughtful, usable, and accessible experiences.
+            </p>
+          </div>
+
+          <div class="ux-work-grid">
+            <article class="ux-work-card reveal">
+              <a class="ux-work-visual" href="https://www.figma.com/proto/itCYAeFfxFjbx0ePFfcOYM/Shuyuan-s-Portfolio?node-id=5277-6075&amp;t=yTJr7dPKCDgR7zcx-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=3428%3A1056&amp;starting-point-node-id=5024%3A2637&amp;show-proto-sidebar=1" target="_blank" rel="noreferrer" aria-label="Open Findamental UX Research Figma prototype">
+                <img src="assets/ux/findamental-ux-research.png" alt="Findamental UX Research cover showing financial-literacy product screens">
+                <span class="ux-work-badge">Financial literacy</span>
+              </a>
+              <div class="ux-work-copy">
+                <p class="card-tag">University of Maryland · 2022</p>
+                <h3>Findamental UX Research</h3>
+                <p>Qualitative research and product concepts for international students navigating financial life in the U.S.</p>
+                <a class="card-link" href="https://www.figma.com/proto/itCYAeFfxFjbx0ePFfcOYM/Shuyuan-s-Portfolio?node-id=5277-6075&amp;t=yTJr7dPKCDgR7zcx-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=3428%3A1056&amp;starting-point-node-id=5024%3A2637&amp;show-proto-sidebar=1" target="_blank" rel="noreferrer">Read case study</a>
+              </div>
+            </article>
+
+            <article class="ux-work-card reveal reveal-delay-1">
+              <a class="ux-work-visual" href="https://www.figma.com/proto/itCYAeFfxFjbx0ePFfcOYM/Shuyuan-s-Portfolio?node-id=6974-6822&amp;t=DI1YewavihLWlljH-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=3428%3A1056&amp;starting-point-node-id=5024%3A2637&amp;show-proto-sidebar=1" target="_blank" rel="noreferrer" aria-label="Open AI Use Case Request Form Figma prototype">
+                <img src="assets/ux/ai-use-case-request-form.png" alt="AI Use Case Request Form interface for Montgomery County">
+                <span class="ux-work-badge">Public-sector AI</span>
+              </a>
+              <div class="ux-work-copy">
+                <p class="card-tag">UMD capstone · 2024</p>
+                <h3>AI Use Case Request Form</h3>
+                <p>A guided service for helping county employees frame workplace problems that AI could meaningfully address.</p>
+                <a class="card-link" href="https://www.figma.com/proto/itCYAeFfxFjbx0ePFfcOYM/Shuyuan-s-Portfolio?node-id=6974-6822&amp;t=DI1YewavihLWlljH-1&amp;scaling=scale-down-width&amp;content-scaling=fixed&amp;page-id=3428%3A1056&amp;starting-point-node-id=5024%3A2637&amp;show-proto-sidebar=1" target="_blank" rel="noreferrer">Read case study</a>
+              </div>
+            </article>
+
+            <article class="ux-work-card reveal reveal-delay-2">
+              <a class="ux-work-visual ux-work-visual-xavor" href="ux-xavor.html" aria-label="Open Xavor UX project case study">
+                <img src="assets/ux/xavor-logo.jpeg" alt="Xavor logo">
+                <span class="ux-work-badge">Industry UX</span>
+              </a>
+              <div class="ux-work-copy">
+                <p class="card-tag">Xavor · 2021</p>
+                <h3>Xavor UX Project</h3>
+                <p>An industry UX project documented in the original portfolio, presented here as a standalone case-study entry.</p>
+                <a class="card-link" href="ux-xavor.html">Read case study</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="timeline section"
+          id="timeline"
+          data-chapter-title="Timeline"
+          data-chapter-kicker="Academic path"
+          data-chapter-accent="#9ed7f5"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">Timeline</p>
+              <h2>The journey so far.</h2>
+            </div>
+            <p class="section-intro">
+              Education, research milestones, and professional experiences that shaped the work.
+            </p>
+          </div>
+
+          <div class="timeline-list">
+            <article class="timeline-item reveal">
+              <p class="timeline-date">May 1, 2026</p>
+              <p class="timeline-text">
+                Published two works at ACM Learning @ Scale:
+                <a href="https://dl.acm.org/doi/abs/10.1145/3774398.3811561" target="_blank" rel="noreferrer">ECHO</a>
+                and
+                <a href="https://dl.acm.org/doi/epdf/10.1145/3774398.3811574" target="_blank" rel="noreferrer">NOSI</a>.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-1">
+              <p class="timeline-date">November 6, 2025</p>
+              <p class="timeline-text">
+                Secured my new advisors, Alex Adams and Thad Starner, and transferred to the HCC
+                Ph.D. track.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-2">
+              <p class="timeline-date">September 6, 2025</p>
+              <p class="timeline-text">
+                Submitted my first-author paper to CHI 2026.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal">
+              <p class="timeline-date">August 22, 2024</p>
+              <p class="timeline-text">
+                Accepted the offer from the Hybrid Intelligence Lab at Georgia Tech and moved to
+                Atlanta.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-1">
+              <p class="timeline-date">June 2024</p>
+              <p class="timeline-text">
+                Received a Ph.D. offer from the Hybrid Intelligence Lab led by Mengyao Li at
+                Georgia Tech.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-2">
+              <p class="timeline-date">May 29, 2024</p>
+              <p class="timeline-text">
+                Graduated from the University of Maryland, College Park, with a clearer research
+                direction shaped by my advisor Jun Nishida.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal">
+              <p class="timeline-date">December 2023 - February 2024</p>
+              <p class="timeline-text">
+                Worked as a Product Developer and Designer intern at Gen G in Shanghai.
+              </p>
+            </article>
+
+            <article class="timeline-item reveal reveal-delay-1">
+              <p class="timeline-date">August 22, 2022</p>
+              <p class="timeline-text">
+                Started my master's at the University of Maryland, College Park, exploring how
+                technology can help people deal with stress.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Shuyuan Liu. Human-centered research for inclusive learning and accessible futures.</p>
+        <p class="scene-credit">Miami-inspired waterfront scene built with <a href="https://kenney.nl" target="_blank" rel="noreferrer">Kenney</a> CC0 3D assets.</p>
+      </footer>
+    </div>
+
+    <script src="script.js?v=20261011v3"></script>
+    <script type="module" src="waterfront-scene.js?v=20261011miami"></script>
+  </body>
+</html>

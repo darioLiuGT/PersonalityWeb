@@ -1,0 +1,19 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="markGlow" x1="42" y1="26" x2="138" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD56A"/>
+      <stop offset="0.5" stop-color="#FF9351"/>
+      <stop offset="1" stop-color="#FF4FA4"/>
+    </linearGradient>
+    <linearGradient id="markRing" x1="20" y1="18" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF5EF"/>
+      <stop offset="1" stop-color="#FFD56A"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="10" y="10" width="160" height="160" rx="42" fill="#0D0916" stroke="rgba(255,245,239,0.16)"/>
+  <path d="M38 130V48H61L113 114V48H138V130H115L63 64V130H38Z" fill="url(#markGlow)"/>
+  <path d="M58 26C101 9 145 31 154 71" stroke="url(#markRing)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M122 153C79 170 35 148 26 108" stroke="url(#markRing)" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="130" cy="134" r="12" fill="#FFD56A"/>
+</svg>

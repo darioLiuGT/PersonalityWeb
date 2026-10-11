@@ -1,0 +1,191 @@
+/* Final cinematic-waterfront layer: loaded after the legacy stylesheet so the
+   skyline stays visible while the portfolio copy remains high contrast. */
+.page-home .waterfront-scene { opacity: 0.9; }
+
+.page-home .waterfront-fallback {
+  opacity: 0.55;
+  background:
+    radial-gradient(ellipse at 74% 52%, rgba(255, 184, 120, 0.42), transparent 18%),
+    radial-gradient(ellipse at 42% 38%, rgba(113, 80, 111, 0.22), transparent 44%),
+    linear-gradient(180deg, rgba(16, 28, 53, 0.08), rgba(48, 48, 82, 0.17) 50%, rgba(16, 28, 53, 0.44));
+}
+
+.page-home .waterfront-fallback::before {
+  opacity: 0.86;
+  background: linear-gradient(180deg, rgba(113, 80, 111, 0.76), rgba(16, 28, 53, 0.98));
+  box-shadow: 0 -1px 0 rgba(255, 184, 120, 0.24), 0 -20px 60px rgba(199, 124, 120, 0.08);
+}
+
+.page-home .waterfront-fallback::after {
+  opacity: 0.72;
+  border-top-color: rgba(255, 184, 120, 0.62);
+  border-bottom-color: rgba(199, 124, 120, 0.38);
+}
+
+.page-home::after {
+  background:
+    linear-gradient(90deg, rgba(16, 28, 53, 0.58), rgba(16, 28, 53, 0.1) 53%, rgba(48, 48, 82, 0.18)),
+    linear-gradient(180deg, rgba(16, 28, 53, 0.04), rgba(16, 28, 53, 0.35));
+}
+
+/* A restrained silhouette layer makes the distant 3D city legible through
+   the content-safe overlays, especially on displays with low WebGL contrast. */
+.waterfront-skyline {
+  position: fixed;
+  right: 7vw;
+  bottom: 9vh;
+  left: 7vw;
+  z-index: 0;
+  display: flex;
+  height: min(26vh, 17rem);
+  align-items: end;
+  justify-content: center;
+  gap: clamp(0.24rem, 0.55vw, 0.75rem);
+  pointer-events: none;
+  opacity: 0.58;
+  filter: drop-shadow(0 -8px 28px rgba(199, 124, 120, 0.12));
+}
+
+.waterfront-skyline span {
+  position: relative;
+  display: block;
+  width: clamp(2.4rem, 5vw, 5.9rem);
+  border: 1px solid rgba(255, 184, 120, 0.2);
+  border-bottom: 0;
+  border-radius: 0.55rem 0.55rem 0 0;
+  background:
+    repeating-linear-gradient(180deg, transparent 0 0.75rem, rgba(255, 246, 234, 0.08) 0.78rem 0.85rem),
+    linear-gradient(180deg, rgba(113, 80, 111, 0.82), rgba(16, 28, 53, 0.96));
+  box-shadow: inset 1px 0 rgba(255, 246, 234, 0.05), inset -1px 0 rgba(199, 124, 120, 0.09);
+}
+
+.waterfront-skyline span:nth-child(1) { height: 36%; }
+.waterfront-skyline span:nth-child(2) { height: 62%; }
+.waterfront-skyline span:nth-child(3) { height: 44%; }
+.waterfront-skyline span:nth-child(4) { height: 83%; width: clamp(3rem, 6vw, 6.9rem); }
+.waterfront-skyline span:nth-child(5) { height: 55%; }
+.waterfront-skyline span:nth-child(6) { height: 72%; width: clamp(2.8rem, 5.6vw, 6.4rem); }
+.waterfront-skyline span:nth-child(7) { height: 42%; }
+.waterfront-skyline span:nth-child(8) { height: 66%; }
+.waterfront-skyline span:nth-child(9) { height: 34%; }
+
+.waterfront-skyline span:nth-child(4)::before,
+.waterfront-skyline span:nth-child(6)::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: 2px;
+  height: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 210, 157, 0.75), transparent);
+  transform: translateX(-50%);
+}
+
+.scene-credit {
+  margin-top: 0.45rem;
+  color: var(--muted-soft);
+  font-size: 0.78rem;
+}
+
+.scene-credit a { color: var(--yellow); }
+
+/* Hero portrait proportion pass: preserve its editorial presence while
+   removing excess sky and lower-body space from the opening composition. */
+.page-home .hero-home {
+  align-items: center;
+}
+
+.page-home .poster-stack {
+  padding-top: 0.75rem;
+}
+
+.page-home .poster-frame {
+  width: min(100%, 33rem);
+}
+
+.page-home .poster-image {
+  /* 4:4.45 is roughly 11% shorter than the former 4:5 treatment. */
+  aspect-ratio: 4 / 4.45;
+  object-position: 52% 36%;
+  transform: scale(1.045) translateZ(16px);
+}
+
+.page-home .poster-caption {
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  gap: 0.55rem;
+  padding: 0.78rem 0.85rem 0.8rem;
+  border-radius: 1.12rem;
+}
+
+.page-home .poster-caption .poster-tag {
+  font-size: 0.82rem;
+}
+
+.page-home .gt-badge-poster {
+  gap: 0.65rem;
+  padding: 0.68rem 0.75rem;
+  border-radius: 0.98rem;
+}
+
+.page-home .gt-badge-poster .gt-wordmark {
+  max-width: 126px;
+}
+
+.page-home .gt-badge-poster .gt-copy strong {
+  font-size: 0.88rem;
+  line-height: 1.3;
+}
+
+.page-home .poster-frame:hover .poster-image {
+  transform: scale(1.08) translateZ(24px);
+}
+
+@media (max-width: 760px), (prefers-reduced-motion: reduce) {
+  .page-home .waterfront-scene { display: none; }
+  .page-home .waterfront-fallback { opacity: 0.55; }
+  .waterfront-skyline { opacity: 0.38; }
+}
+
+@media (max-width: 1100px) {
+  .page-home .hero-home {
+    align-items: start;
+  }
+
+  .page-home .poster-stack {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-home .poster-frame {
+    width: 100%;
+  }
+
+  .page-home .poster-image {
+    aspect-ratio: 4 / 4.55;
+    object-position: 52% 34%;
+  }
+
+  .page-home .poster-caption {
+    right: 0.8rem;
+    bottom: 0.8rem;
+    left: 0.8rem;
+    padding: 0.7rem;
+  }
+
+  .page-home .gt-badge-poster {
+    padding: 0.62rem 0.68rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .waterfront-skyline {
+    right: 4vw;
+    bottom: 6vh;
+    left: 4vw;
+    height: 17vh;
+    gap: 0.18rem;
+  }
+}

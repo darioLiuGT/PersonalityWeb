@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nexus Studio | Private HCI Admissions Guidance</title>
+    <meta
+      name="description"
+      content="Invite-only Nexus Studio page with private HCI admissions guidance, student feedback, and privacy-protected results."
+    >
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=20260713b">
+  </head>
+  <body class="page-detail page-private">
+    <canvas class="neon-canvas" id="neon-canvas" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="ambient ambient-three" aria-hidden="true"></div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+    <div class="chapter-indicator chapter-indicator-private" id="chapter-indicator" aria-hidden="true">
+      <span class="chapter-indicator-label">Current section</span>
+      <strong class="chapter-indicator-title" id="chapter-indicator-title">Nexus Studio</strong>
+      <p class="chapter-indicator-kicker" id="chapter-indicator-kicker">Invite-only overview</p>
+    </div>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="atelier.html" aria-label="Nexus Studio private portal">
+          <span class="brand-mark">SL</span>
+          <span class="brand-lockup">
+            <strong>Shuyuan Liu</strong>
+            <small>Nexus Studio private admissions</small>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="index.html#timeline">Timeline</a>
+        </nav>
+
+        <div class="header-spacer" aria-hidden="true"></div>
+      </header>
+
+      <main>
+        <section
+          class="detail-hero detail-hero-private section"
+          data-chapter-title="Nexus Studio"
+          data-chapter-kicker="Invite-only overview"
+          data-chapter-accent="#2c85c8"
+        >
+          <div class="detail-copy reveal">
+            <div class="story-ribbon story-ribbon-private" aria-label="Private portal tags">
+              <span>Invite only</span>
+              <span>Nonlinear path</span>
+              <span>Proof with privacy</span>
+            </div>
+            <p class="section-label">Nexus Studio</p>
+            <h1>
+              <span>Built,</span>
+              <span>Not Given</span>
+            </h1>
+            <p class="hero-deck">
+              A private page for invited students who want a more honest story: not an elite
+              pipeline, but a self-built path into HCI research, product work, and Georgia Tech
+              HCC.
+            </p>
+            <p class="hero-support">
+              I work especially well with students whose profiles feel nonlinear, scattered, or not
+              prestigious enough on paper. Unlock the results board to see privacy-protected
+              outcomes, student feedback, and selected client-facing material.
+            </p>
+
+            <div class="nexus-hero-brand">
+              <img
+                class="nexus-logo"
+                src="assets/nexus-studio-logo.svg"
+                alt="Nexus Studio logo"
+              >
+            </div>
+
+            <div class="hero-actions">
+              <a class="button button-outline" href="#journey">My journey</a>
+              <a class="button button-solid" href="#private-gate">Unlock results</a>
+            </div>
+          </div>
+
+          <aside class="scene-stage scene-stage-private reveal reveal-delay-1">
+            <div class="scene-halo scene-halo-pink" aria-hidden="true"></div>
+            <div class="scene-halo scene-halo-gold" aria-hidden="true"></div>
+            <div class="scene-grid-overlay" aria-hidden="true"></div>
+            <div class="scene-chip scene-chip-upper">Private board</div>
+
+            <article class="private-profile-card">
+              <div class="private-portrait-wrap">
+                <img
+                  class="private-portrait"
+                  src="assets/profile-photo.png"
+                  alt="Portrait of Shuyuan Liu standing on a beach at sunset"
+                >
+              </div>
+              <div class="private-profile-copy">
+                <p class="card-tag">Shuyuan Liu</p>
+                <h3>From the bottom of the list to Georgia Tech HCC.</h3>
+                <p>
+                  I was not shaped by a smooth elite-school pipeline. I came from setbacks,
+                  rebuilding, and a long sequence of sharper decisions. That is the perspective I
+                  bring into admissions guidance.
+                </p>
+              </div>
+            </article>
+
+            <div class="lock-panel" id="private-gate" data-private-gate>
+              <p class="card-tag">Access required</p>
+              <h3>Student-facing material lives behind an access code</h3>
+              <p>
+                This page is meant to be shared directly with interested students, not surfaced on
+                my public academic site. Enter the code to view redacted outcomes, proof images,
+                and the private results board.
+              </p>
+
+              <form class="gate-form" id="private-gate-form" novalidate>
+                <label class="sr-only" for="private-password">Access code</label>
+                <input
+                  class="gate-input"
+                  id="private-password"
+                  name="private-password"
+                  type="password"
+                  autocomplete="current-password"
+                  placeholder="Enter access code"
+                >
+                <button class="button button-solid" type="submit">Unlock</button>
+              </form>
+
+              <p class="gate-message" id="private-gate-message" role="status" aria-live="polite">
+                Request the access code directly from me.
+              </p>
+
+              <ul class="gate-list">
+                <li>Shared by direct link, not public navigation</li>
+                <li>Offer proofs are redacted and watermarked</li>
+                <li>Detailed results appear only after verification</li>
+              </ul>
+            </div>
+
+            <div class="scene-meta-row scene-meta-row-private">
+              <article class="story-panel story-panel-secondary">
+                <span>After Unlock</span>
+                <strong>Journey, student feedback, and privacy-protected admissions proof.</strong>
+              </article>
+            </div>
+          </aside>
+        </section>
+
+        <nav class="service-subnav reveal" aria-label="Nexus Studio sections">
+          <a href="#about">About</a>
+          <a href="#journey">Journey</a>
+          <a href="#services">Services</a>
+          <a href="#reviews">Feedback</a>
+          <a href="#results">Results</a>
+        </nav>
+
+        <section
+          class="detail-grid section private-preview"
+          id="about"
+          data-chapter-title="About"
+          data-chapter-kicker="Background and fit"
+          data-chapter-accent="#4da7dc"
+        >
+          <article class="content-card reveal">
+            <p class="card-tag">Who I am</p>
+            <h3>Georgia Tech HCC Ph.D. student with a human-centered HCI perspective</h3>
+            <p>
+              I am an HCC Ph.D. student at Georgia Tech working across inclusive learning,
+              accessibility, affective computing, and human-centered AI. That research background
+              shapes how I think about HCI program fit, academic storytelling, and research
+              positioning.
+            </p>
+          </article>
+
+          <article class="content-card reveal reveal-delay-1">
+            <p class="card-tag">Who I help best</p>
+            <h3>Students with nonlinear profiles, mixed signals, or self-doubt</h3>
+            <p>
+              If your background feels messy, not famous enough, or difficult to explain, that is
+              exactly where I can help. I work well with interdisciplinary applicants who need a
+              sharper story, clearer direction, and stronger program fit.
+            </p>
+          </article>
+
+          <article class="content-card content-card-wide reveal reveal-delay-2">
+            <p class="card-tag">Why this page is private</p>
+            <p>
+              The detailed board behind the access code contains anonymized outcome summaries,
+              selective case materials, and proof meant for interested students rather than public
+              academic browsing. Sensitive student documents stay off the public site.
+            </p>
+          </article>
+        </section>
+
+        <section
+          class="section"
+          id="journey"
+          data-chapter-title="Journey"
+          data-chapter-kicker="Nonlinear climb"
+          data-chapter-accent="#9ed7f5"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">My journey</p>
+              <h2>Not an elite-by-default story. A self-built one.</h2>
+            </div>
+            <p class="section-intro">
+              This is the branding I stand behind: I know what it feels like to start from behind,
+              rebuild, and climb anyway.
+            </p>
+          </div>
+
+          <div class="journey-grid">
+            <article class="journey-card journey-card-origin reveal">
+              <p class="card-tag">01. Early start</p>
+              <h3>Bottom-ranked at a key public middle school in China</h3>
+              <p>
+                I did not begin as the obvious success story. Starting from the bottom taught me
+                how shame, comparison, and low confidence can shape a student long before college
+                applications begin.
+              </p>
+            </article>
+
+            <article class="journey-card reveal reveal-delay-1">
+              <div class="journey-logo-wrap">
+                <img
+                  class="journey-logo journey-logo-york"
+                  src="YorkUniversity.png"
+                  alt="York University logo"
+                >
+              </div>
+              <p class="card-tag">02. York University</p>
+              <h3>Psychology</h3>
+              <p>
+                I studied psychology at York University and built a foundation in how people think,
+                behave, and make meaning before I formally entered HCI.
+              </p>
+            </article>
+
+            <article class="journey-card reveal reveal-delay-2">
+              <div class="journey-logo-wrap journey-logo-wrap-dark">
+                <img
+                  class="journey-logo journey-logo-xavor"
+                  src="xavor.jpeg"
+                  alt="Xavor logo"
+                >
+              </div>
+              <p class="card-tag">03. Xavor</p>
+              <h3>Two years in UX research</h3>
+              <p>
+                I spent two years in UX research, learning how to turn ambiguity into evidence and
+                evidence into product decisions.
+              </p>
+            </article>
+
+            <article class="journey-card reveal">
+              <div class="journey-logo-wrap">
+                <img
+                  class="journey-logo journey-logo-umd"
+                  src="assets/umd-college-park-mark.svg"
+                  alt="University of Maryland College Park HCI wordmark"
+                >
+              </div>
+              <p class="card-tag">04. UMD College Park</p>
+              <h3>Human-Computer Interaction</h3>
+              <p>
+                At Maryland I found a clearer HCI direction and learned how to connect research
+                questions, design methods, and long-form academic storytelling.
+              </p>
+            </article>
+
+            <article class="journey-card reveal reveal-delay-1">
+              <div class="journey-logo-wrap">
+                <img
+                  class="journey-logo journey-logo-geng"
+                  src="gen-g6111.jpg"
+                  alt="Gen G logo"
+                >
+              </div>
+              <p class="card-tag">05. Gen.G</p>
+              <h3>R&amp;D and product experimentation</h3>
+              <p>
+                My work at Gen.G strengthened the link between research, product thinking, and
+                execution under real constraints.
+              </p>
+            </article>
+
+            <article class="journey-card reveal reveal-delay-2">
+              <div class="journey-logo-wrap">
+                <img
+                  class="journey-logo journey-logo-gt"
+                  src="assets/georgia-tech-wordmark.svg"
+                  alt="Georgia Tech wordmark"
+                >
+              </div>
+              <p class="card-tag">06. Georgia Tech</p>
+              <h3>Human-Centered Computing Ph.D.</h3>
+              <p>
+                Georgia Tech is where the research, the advising, and the long-range vision now
+                come together. It is also why I can guide students across both Master's and Ph.D.
+                HCI applications with more depth.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="section"
+          id="services"
+          data-chapter-title="Services"
+          data-chapter-kicker="How I help"
+          data-chapter-accent="#67d4ff"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">Services</p>
+              <h2>How I turn scattered experiences into a stronger application.</h2>
+            </div>
+            <p class="section-intro">
+              My work is not only about editing. It is about finding the real through-line in your
+              story and building a convincing case around it.
+            </p>
+          </div>
+
+          <div class="experience-grid">
+            <article class="experience-card reveal">
+              <div class="experience-logo-wrap experience-logo-wrap-token">
+                <span class="experience-token">01</span>
+              </div>
+              <h3>Narrative strategy</h3>
+              <p>
+                SOP, personal statement, CV, and portfolio framing that turns disconnected
+                experiences into a coherent direction.
+              </p>
+            </article>
+
+            <article class="experience-card reveal reveal-delay-1">
+              <div class="experience-logo-wrap experience-logo-wrap-token">
+                <span class="experience-token">02</span>
+              </div>
+              <h3>Program and research fit</h3>
+              <p>
+                School selection, faculty fit, and project positioning for HCI Master's and Ph.D.
+                applications.
+              </p>
+            </article>
+
+            <article class="experience-card reveal reveal-delay-2">
+              <div class="experience-logo-wrap experience-logo-wrap-token">
+                <span class="experience-token">03</span>
+              </div>
+              <h3>Execution and accountability</h3>
+              <p>
+                Iteration, deadlines, and pressure-tested revision support for applicants who need
+                both honest critique and real momentum.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="section"
+          id="reviews"
+          data-chapter-title="Feedback"
+          data-chapter-kicker="Student voice and trust"
+          data-chapter-accent="#67d4ff"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">Student feedback</p>
+              <h2>What students said about the process.</h2>
+            </div>
+            <p class="section-intro">
+              Short anonymized excerpts about reflection, clarity, and fit.
+            </p>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="quote-card reveal">
+              <p class="card-tag">Student 01</p>
+              <blockquote>
+                “这个过程，对我来说更像是一个怎么从‘别人眼中的我’变成‘我眼中的我’的过程……Dario
+                帮助我从一片一片细碎的文字里去好好拼起属于我自己的文书故事，也帮助我拿下了很多我以为是彩票的
+                offer。”
+              </blockquote>
+            </article>
+
+            <article class="quote-card reveal reveal-delay-1">
+              <p class="card-tag">Student 02</p>
+              <blockquote>
+                “写文书的这段经历让我收获的不仅是漂亮的文书，更多的是对自己深刻的反思和成长。我相信，这段时间所学习到的一切，必定会对我的未来有很大的帮助。”
+              </blockquote>
+            </article>
+
+            <article class="quote-card reveal reveal-delay-2">
+              <p class="card-tag">Student 03</p>
+              <blockquote>
+                “但是感觉人应该有始有终……想了想还是应该和你汇报一下。”
+              </blockquote>
+              <p class="quote-note">
+                Even when a student felt conflicted about an outcome, they still came back to share
+                it. That kind of trust matters to me.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section
+          class="section"
+          id="results"
+          data-chapter-title="Results"
+          data-chapter-kicker="Selected outcomes"
+          data-chapter-accent="#2c85c8"
+        >
+          <div class="section-heading reveal">
+            <div>
+              <p class="section-label">Selected results</p>
+              <h2>Privacy-protected results board.</h2>
+            </div>
+            <p class="section-intro">
+              Unlock to view compressed, watermarked offer proof and a timeline of selected
+              admissions outcomes.
+            </p>
+          </div>
+
+          <div id="private-protected" class="protected-shell" hidden aria-hidden="true"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js?v=20260713a"></script>
+  </body>
+</html>
