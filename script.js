@@ -61,10 +61,21 @@ function observeReveals() {
 
 function observeActiveLinks() {
   const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+  const isHomePage = document.body.classList.contains("page-home");
   const sectionTargets = navLinks
     .map((link) => {
       const href = link.getAttribute("href");
-      return href && href.startsWith("#") ? document.querySelector(href) : null;
+      if (href && href.startsWith("#")) {
+        return document.querySelector(href);
+      }
+
+      // Home is a document link for resilient cross-page navigation, but on the
+      // homepage it should behave like the other section-aware navigation items.
+      if (isHomePage && href === "index.html") {
+        return document.querySelector(".hero-home");
+      }
+
+      return null;
     })
     .filter(Boolean);
 
@@ -81,8 +92,16 @@ function observeActiveLinks() {
 
         navLinks.forEach((link) => {
           const href = link.getAttribute("href");
-          const matches = href === `#${entry.target.id}`;
+          const matches =
+            href === `#${entry.target.id}` ||
+            (entry.target.classList.contains("hero-home") && href === "index.html");
           link.classList.toggle("is-active", matches);
+
+          if (matches) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
         });
       });
     },

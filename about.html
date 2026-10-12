@@ -15,6 +15,7 @@
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css?v=20260713b">
+    <link rel="stylesheet" href="portfolio-v5.css?v=20261011v5">
   </head>
   <body class="page-detail">
     <div class="grain" aria-hidden="true"></div>
@@ -29,7 +30,7 @@
           <span class="brand-mark">SL</span>
           <span class="brand-lockup">
             <strong>Shuyuan Liu</strong>
-            <small>About</small>
+            <small>HCC Ph.D. Researcher</small>
           </span>
         </a>
 
@@ -37,6 +38,7 @@
           <a href="index.html">Home</a>
           <a href="about.html" aria-current="page">About</a>
           <a href="research.html">Research</a>
+          <a href="index.html#ux-work">UX Work</a>
           <a href="index.html#timeline">Timeline</a>
         </nav>
 
@@ -44,23 +46,23 @@
       </header>
 
       <main>
-        <section class="detail-hero section">
+        <section class="detail-hero about-hero section">
           <div class="detail-copy reveal">
             <p class="section-label">About</p>
             <h1>
-              <span>What</span>
-              <span>I Do</span>
+              <span>About</span>
+              <span>Me</span>
             </h1>
             <p class="hero-deck">
-              I am a Ph.D. student in Human-Centered Computing at Georgia Tech. My research
-              focuses on <strong>affective computing and human-centered AI</strong>, with an
-              emphasis on developing seamless sensing and intervention technologies that support
-              affect regulation and optimize human performance without disrupting primary tasks.
+              I am a Ph.D. student in Human-Centered Computing at Georgia Tech, advised by
+              <strong>Thad Starner and Alex Adams</strong>.
             </p>
             <p class="hero-support">
-              I am also interested in designing <strong>AI-powered accessible technologies</strong>
-              that enhance learning experiences and reduce barriers for neurodivergent learners
-              and people with disabilities.
+              My research lies at the intersection of affective computing, human factors, and
+              accessibility. I develop unobtrusive sensing and adaptive intervention technologies
+              that support affect regulation and human performance without disrupting ongoing
+              activities. I also explore AI-enabled approaches to making learning more accessible
+              for neurodivergent learners and people with disabilities.
             </p>
 
             <div class="advisor-block" aria-label="Advisors">
@@ -71,23 +73,10 @@
               </div>
             </div>
 
-            <div class="credential-strip credential-strip-compact">
-              <div class="gt-badge">
-                <img
-                  class="gt-wordmark"
-                  src="assets/georgia-tech-wordmark.svg"
-                  alt="Georgia Tech wordmark"
-                >
-                <div class="gt-copy">
-                  <strong>Georgia Tech HCC</strong>
-                  <span>Affective computing, human-centered AI, and accessibility.</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          <div class="detail-visual reveal reveal-delay-1">
-            <div class="poster-frame">
+          <div class="detail-visual about-portrait reveal reveal-delay-1">
+            <div class="poster-frame portrait-panel">
               <img
                 class="poster-image"
                 src="assets/profile-photo.png"
@@ -97,37 +86,39 @@
           </div>
         </section>
 
-        <section class="detail-grid section">
-          <article class="content-card reveal">
-            <p class="card-tag">Focus</p>
-            <h3>Affective computing and human-centered AI</h3>
-            <p>
-              I develop unobtrusive sensing and adaptive intervention technologies that support
-              affect regulation, human performance, and accessible experiences.
-            </p>
-          </article>
+        <section class="research-interest-section section">
+          <div class="research-interest-heading reveal">
+            <p class="section-label">Research interests</p>
+            <h2>Three areas, one human-centered goal.</h2>
+            <p>Designing technologies that recognize human needs and respond with care, clarity, and access.</p>
+          </div>
 
-          <article class="content-card reveal reveal-delay-1">
-            <p class="card-tag">Current areas</p>
-            <ul class="card-list">
-              <li>Affect regulation and human performance</li>
-              <li>Unobtrusive physiological and multimodal sensing</li>
-              <li>Adaptive interventions and human-AI interaction</li>
-              <li>AI-powered accessible learning technologies</li>
-            </ul>
-          </article>
+          <div class="interest-grid">
+            <article class="content-card interest-card reveal">
+              <span class="interest-icon" aria-hidden="true">~</span>
+              <h3>Affective Computing &amp; Human Performance</h3>
+              <p>Unobtrusive sensing and timely interventions that support affect regulation during real tasks.</p>
+            </article>
 
-          <article class="content-card content-card-wide reveal reveal-delay-2">
-            <p class="card-tag">Approach</p>
-            <p>
-              Drawing on psychology, human-computer interaction, and user experience research, I
-              study how physiological, behavioral, and interaction data can support people without
-              interrupting their primary tasks—and how AI can reduce barriers to learning.
-            </p>
-            <p>
-              I care about building systems that do more than capture signals. They should respond
-              with clarity, care, and meaningful access.
-            </p>
+            <article class="content-card interest-card reveal reveal-delay-1">
+              <span class="interest-icon" aria-hidden="true">↗</span>
+              <h3>Human–AI Interaction</h3>
+              <p>Interactive AI systems that complement attention, decision-making, and ongoing activity.</p>
+            </article>
+
+            <article class="content-card interest-card reveal reveal-delay-2">
+              <span class="interest-icon" aria-hidden="true">◎</span>
+              <h3>AI for Accessibility</h3>
+              <p>AI-enabled learning tools that reduce barriers for neurodivergent learners and people with disabilities.</p>
+            </article>
+          </div>
+
+          <article class="content-card approach-card reveal">
+            <div>
+              <p class="card-tag">Research approach</p>
+              <h2>Evidence into interaction.</h2>
+            </div>
+            <p>My work combines human factors, experimental psychology, user research, and interactive system prototyping. I investigate how physiological, behavioral, and interaction data can inform intelligent technologies that respond to human needs while minimizing disruption to primary tasks.</p>
           </article>
         </section>
       </main>
